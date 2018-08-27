@@ -104,7 +104,6 @@ var Headroom = function (_Component) {
 
     _this.isOutOfBound = function (currentScrollY) {
       var pastTop = currentScrollY < 0;
-
       var scrollerPhysicalHeight = _this.getScrollerPhysicalHeight();
       var scrollerHeight = _this.getScrollerHeight();
 
@@ -185,9 +184,9 @@ var Headroom = function (_Component) {
     _this.scrollTicking = false;
     _this.resizeTicking = false;
     _this.state = {
-      state: 'unfixed',
-      translateY: 0,
-      className: 'headroom headroom--unfixed'
+      state: 'unpinned',
+      translateY: '-100%',
+      className: 'headroom headroom--unpinned'
     };
     return _this;
   }
