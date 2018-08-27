@@ -40,7 +40,7 @@ export default function (
     currentScrollY > (state.height + props.pinStart) && distanceScrolled > props.downTolerance
   ) {
     return {
-      action: 'unpin',
+      action: 'pin',
       scrollDirection,
       distanceScrolled,
     }
@@ -51,7 +51,7 @@ export default function (
     ['pinned', 'unfixed'].indexOf(state.state) < 0
   ) {
     return {
-      action: 'pin',
+      action: 'unpin',
       scrollDirection,
       distanceScrolled,
     }
@@ -63,7 +63,7 @@ export default function (
     ['pinned', 'unfixed'].indexOf(state.state) < 0
   ) {
     return {
-      action: 'pin',
+      action: 'unpin',
       scrollDirection,
       distanceScrolled,
     }
