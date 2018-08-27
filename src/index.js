@@ -46,9 +46,9 @@ export default class Headroom extends Component {
     this.scrollTicking = false
     this.resizeTicking = false
     this.state = {
-      state: 'unfixed',
-      translateY: 0,
-      className: 'headroom headroom--unfixed',
+      state: 'unpinned',
+      translateY: '-100%',
+      className: 'headroom headroom--unpinned',
     }
   }
 
@@ -162,7 +162,6 @@ export default class Headroom extends Component {
 
   isOutOfBound = (currentScrollY) => {
     const pastTop = currentScrollY < 0
-
     const scrollerPhysicalHeight = this.getScrollerPhysicalHeight()
     const scrollerHeight = this.getScrollerHeight()
 
